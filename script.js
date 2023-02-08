@@ -29,7 +29,8 @@ function generatePassword() {
   if (specialBool) {
     possibleChar.push(...specialCharacters)
   }
-  return();
+  return(Math.floor(Math.random(passwordLength));
+
 }
 
 
