@@ -29,6 +29,9 @@ function generatePassword() {
   if (specialBool) {
     possibleChar.push(...specialCharacters)
   }
+  if (passwordLength < 8 || > 128) {
+    alert ("Please choose a length between 8 and 128 characters")
+  }
   return(Math.floor(Math.random(passwordLength));
 
 }
