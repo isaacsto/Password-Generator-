@@ -18,23 +18,21 @@ function generatePassword() {
   console.log(passwordLength, upperBool, lowerBool, numberBool, specialBool)
 
   if (upperBool) {
-    possibleChar.push(...upperCase)
+    possibleChar.push(...upperCase);
   }
   if (lowerBool) {
-    possibleChar.push(...lowerCase)
+    possibleChar.push(...lowerCase);
   }
   if (numberBool) {
-    possibleChar.push(...numbers)
+    possibleChar.push(...numbers);
   }
   if (specialBool) {
-    possibleChar.push(...specialCharacters)
+    possibleChar.push(...specialCharacters);
   }
-  if (passwordLength < 8 || > 128) {
-    alert ("Please choose a length between 8 and 128 characters")
-  }
-  return(Math.floor(Math.random(passwordLength));
 
+  
 }
+
 
 
 generatePassword();
