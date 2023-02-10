@@ -9,7 +9,7 @@ var specialCharacters = ["!", "@", "#", "$", "%", "&", "*"];
 
 var possibleChar = [];
 
-var passwordLength = prompt("How many characters should be in the password?");
+var passwordLength = parseInt(prompt("How many characters should be in the password?"));
 
 function generatePassword() {
   var passwordLength 
@@ -31,8 +31,8 @@ function generatePassword() {
   if (specialBool) {
     possibleChar.push(...specialCharacters);
   }
-}
 
+}
   function getRandom() {
     for ( i = 0; i <= passwordLength; i ++) {
     var randomChars = Math.floor(Math.random() * possibleChar.length)
@@ -40,9 +40,12 @@ function generatePassword() {
   }
 }
 
+
 generatePassword();
 
-getRandom();
+var temp = getRandom();
+
+console.log(temp);
 
 console.log(possibleChar);
 
