@@ -11,7 +11,7 @@ var specialCharacters = ["!", "@", "#", "$", "%", "&", "*"];
 
 var possibleChar = [];
 
-// Below is a function that assigns user input in response to a series of prompts to variables and if statements to push each array for the individual characters into the once empty possibleChar array / an if statement to ensure the user inputs an appropriate number for the passwordLength or the page returns undefined 
+// Below is a function that assigns user input in response to a series of prompts to variables and if statements to push each array for the individual characters into the once empty possibleChar array / if statements to ensure the user inputs an appropriate number for the passwordLength and selects at least one character type or the page returns "Try again" 
 
 function generatePassword() {
   var passwordLength = parseInt(prompt("How many characters should be in the password?"));
