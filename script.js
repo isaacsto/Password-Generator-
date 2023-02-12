@@ -17,6 +17,7 @@ function generatePassword() {
   var passwordLength = parseInt(prompt("How many characters should be in the password?"));
   if (passwordLength < 8 || passwordLength > 128) {
     alert ("Please input a number between 8 and 128")
+    return ;
   } else {
   var upperBool = confirm("Would you like uppercase characters in the password?");
   var lowerBool = confirm("Would you like lowercase characters in the password?");
@@ -39,10 +40,12 @@ function generatePassword() {
 }
   console.log(possibleChar)
 
+  
+
   // below is the for loop + Math.floor/Math.random statements that will enable the code to go through my possibleChar array and select random characters based on the user input 
 
   var randomChar = ''
-  for (i = 0; i <= passwordLength; i++) {
+  for (i = 0; i < passwordLength; i++) {
     randomChar += possibleChar[Math.floor(Math.random() * possibleChar.length)]
   
   
