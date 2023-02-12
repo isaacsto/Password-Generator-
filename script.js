@@ -11,13 +11,13 @@ var specialCharacters = ["!", "@", "#", "$", "%", "&", "*"];
 
 var possibleChar = [];
 
-// Below is a function that assigns user input in response to a series of prompts to variables and if statements to push each array for the individual characters into the once empty possibleChar array 
+// Below is a function that assigns user input in response to a series of prompts to variables and if statements to push each array for the individual characters into the once empty possibleChar array / an if statement to ensure the user inputs an appropriate number for the passwordLength or the page returns undefined 
 
 function generatePassword() {
   var passwordLength = parseInt(prompt("How many characters should be in the password?"));
   if (passwordLength < 8 || passwordLength > 128) {
     alert ("Please input a number between 8 and 128")
-    return ;
+    return "Try Again";
   } else {
   var upperBool = confirm("Would you like uppercase characters in the password?");
   var lowerBool = confirm("Would you like lowercase characters in the password?");
@@ -36,6 +36,10 @@ function generatePassword() {
   }
   if (specialBool) {
     possibleChar.push(...specialCharacters);
+  }
+  if (upperBool === false && lowerBool === false && numberBool === false && specialBool === false) {
+    alert("You must select at least one type of character")
+    return "Try Again";
   }
 }
   console.log(possibleChar)
