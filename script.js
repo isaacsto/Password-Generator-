@@ -11,6 +11,9 @@ var possibleChar = [];
 
 function generatePassword() {
   var passwordLength = parseInt(prompt("How many characters should be in the password?"));
+  //if (passwordLength < 28 || passwordLength < 8) {
+  //  alert ("Please enter a number between 8 and 28")
+  //};
   var upperBool = confirm("Would you like uppercase characters in the password?");
   var lowerBool = confirm("Would you like lowercase characters in the password?");
   var numberBool = confirm("Would you like numerics in the password?");
@@ -31,14 +34,15 @@ function generatePassword() {
   }
 console.log(possibleChar)
 
-  function getRandom() {
+  var randomChar = ''
     for ( i = 0; i <= passwordLength; i ++) {
-    var randomChar = possibleChar[Math.floor(Math.random() * possibleChar.length)]
-    return randomChar;
+    randomChar += possibleChar[Math.floor(Math.random() * possibleChar.length)]
   }
-  
+
+  console.log(randomChar)
+  return randomChar;
 }
-}
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
