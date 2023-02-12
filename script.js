@@ -33,7 +33,8 @@ console.log(possibleChar)
 
   function getRandom() {
     for ( i = 0; i <= passwordLength; i ++) {
-    var randomChar = Math.floor(Math.random() * possibleChar.length)
+    var randomChar = possibleChar[Math.floor(Math.random() * possibleChar.length)]
+    return randomChar;
   }
   
 }
