@@ -25,6 +25,11 @@ function generatePassword() {
   var specialBool = confirm("Would you like special characters in the password?");
   console.log(passwordLength, upperBool, lowerBool, numberBool, specialBool)
 
+  if (upperBool === false && lowerBool === false && numberBool === false && specialBool === false) {
+    alert("You must select at least one type of character")
+    return "Try Again";
+  }
+
   if (upperBool) {
     possibleChar.push(...upperCase);
   }
@@ -37,10 +42,7 @@ function generatePassword() {
   if (specialBool) {
     possibleChar.push(...specialCharacters);
   }
-  if (upperBool === false && lowerBool === false && numberBool === false && specialBool === false) {
-    alert("You must select at least one type of character")
-    return "Try Again";
-  }
+ 
 }
   console.log(possibleChar)
 
